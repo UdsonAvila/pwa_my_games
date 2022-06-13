@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="manifest.json" rel="manifest">
+
+  <!-- <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon"> -->
+
+  <!-- iOS meta tags and icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MyGames">
+  <!-- <link rel="apple-touch-icon" href="icons/152.png"> -->
+
+  <meta name="description" content="MyGames">
+  <meta name="theme-color" content="#2a6cc8" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+
+  <title>MyGames</title>
+</head>
+
+<body>
+
+  <header class="container-fluid fixed-top">
+
+    <!-- <img src="imgs/logo.png" class="logo"> -->
+    <button type="button" class="btn btMenu">&nbsp;</button>
+
+  </header>
+
+  <main class="container" id="conteudo">
+
+    <div class="row">
+      <div class="col-md-6 ti_card" style="background: yellow;">
+        Teste console 1
+      </div>
+      <div class="col-md-6 ti_card" style="background: red;">
+        Teste console 2
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="container-fluid fixed-bottom">
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button type="button" class="btn btn-primary">Historico</button>
+      <button type="button" class="btn btn-primary">Sinopse</button>
+      <button type="button" id="btInstall" hidden class="btn btn-primary">Instalar</button>
+    </div>
+
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+
+    var swRegistro = null;
+
+    if ('serviceWorker' in navigator) {
+
+      window.addEventListener('load', () => {
+
+        navigator.serviceWorker.register("service_worker.js").then((reg) => {
+
+          swRegistro = reg;
+          console.log("Service Worker registrado com sucesso!");
+          inicializarInstalacao();
+
+        });
+
+      });
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
