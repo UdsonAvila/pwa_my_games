@@ -1,5 +1,5 @@
 header {
-  background: url('../imgs/bg002.jpg');
+  background: url('../imgs/download.png');
   background-position: center;
   background-size: cover;
   height: 60px;
@@ -11,7 +11,8 @@ header {
   position: absolute;
   margin-left: -90px;
   left: 50%;
-  top: 25px;
+  top: 20px;
+  border-radius: 250px
 }
 
 main {
@@ -50,7 +51,8 @@ main h2 {
   background: rgba(219, 219, 219, 0.788);
   padding-left: 40px;
   line-height: 40px;
-  border-top-left-radius: 10px;border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 main h2 span {
@@ -64,7 +66,7 @@ main h2 span {
 }
 
 footer {
-  background: url('../imgs/bg001.jpg');
+  background: url('../imgs/download.png');
   background-position: center;
   background-size: cover;
   height: 60px;
