@@ -1,7 +1,10 @@
+.clearPaddingMargin {
+  padding: 0px;
+  margin: 0px;
+}
+
 header {
-  background: url('../imgs/download.png');
-  background-position: center;
-  background-size: cover;
+background: #000;
   height: 60px;
   border-bottom: 5px solid #f8931d;
 }
@@ -25,7 +28,7 @@ main {
 }
 
 .card-container {
-  
+
   border-radius: 23px;
   margin: 2rem;
   background: rgba(219, 219, 219, 0.188);
@@ -33,13 +36,37 @@ main {
 
 .card {
   margin-bottom: 20px;
+  border: none;
 }
 
 .card-img-top {
   padding: 0.7em;
 }
 
-.ti_card_enroll{
+.block1 {
+  height: 15%;
+  padding: 0.5em;
+  text-align: justify;
+  display: inline-block;
+  overflow: auto !important;
+  text-overflow: ellipsis;
+
+}
+
+.block2 {
+height: auto;
+  padding: 0.5em;
+  text-align: justify;
+  display: inline-block;
+  overflow: auto !important;
+  text-overflow: ellipsis;
+
+}
+.centerDiv {
+  display: flex;
+   justify-content: center;
+}
+.ti_card_enroll {
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -53,22 +80,13 @@ main h2 {
   line-height: 40px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
 }
 
-main h2 span {
-  background: url('../imgs/cat_icon.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 32px;
-  height: 40px;
-  position: absolute;
-  margin-left: -40px;
-}
+
 
 footer {
-  background: url('../imgs/download.png');
-  background-position: center;
-  background-size: cover;
+ background: #000;
   height: 60px;
   padding-top: 10px;
   border-top: 5px solid #3a8ae9;

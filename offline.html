@@ -1,37 +1,39 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+ <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
 
-    <link href="manifest.json" rel="manifest">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
-    <!-- iOS meta tags and icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="App Storm">
-    <link rel="apple-touch-icon" href="icons/152.png">
+  <link href="manifest.json" rel="manifest">
 
-    <meta name="description" content="App Storm">
-    <meta name="theme-color" content="#f8931d" />
+  <!-- iOS meta tags and icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="My Games">
+  <link rel="apple-touch-icon" href="icons/152.png">
 
-    <title>App Storm</title>
-  </head>
-  <body>
+  <meta name="description" content="My Games">
+  <meta name="theme-color" content="#000" />
 
-    <header class="container-fluid fixed-top">
+  <title>My Games</title>
+</head>
 
-        <img src="imgs/logo.png" class="logo">
+<body>
 
-    </header>
+  <header class="container-fluid fixed-top">
+
+    <img alt="logo" src="imgs/logo.png" class="logo">
+
+  </header>
 
     <section class="container" style="margin-top: 100px;">
 
@@ -73,7 +75,7 @@ ajax.onreadystatechange = function()
 
      if(data_json.length == 0){
 
-        content.innerHTML = '<div class="alert alert-warning" role="alert">Desculpe. Ainda não temos brinquedos cadastrados!</div>';
+        content.innerHTML = '<div class="alert alert-warning" role="alert">Desculpe. Ainda não temos jogos cadastrados!</div>';
      
     }else{
         
@@ -81,19 +83,19 @@ ajax.onreadystatechange = function()
 
         for(let i = 0; i<data_json.length; i++){
         
-            html_content +='<div class="row"><div class="col-12"><h2><span> </span> '+data_json[i].categoria+'</h2></div></div>';
+            html_content +='<div class="row"><div class="col-12"><h2> '+data_json[i].jogos+'</h2></div></div>';
 
-            if(data_json[i].brinquedos.length == 0){
+            if(data_json[i].jogos.length == 0){
 
-                html_content += '<div class="row"><div class="col-12"><div class="alert alert-warning" role="alert">Desculpe. Não temos brinquedos para esta categoria.</div></div></div>';
+                html_content += '<div class="row"><div class="col-12"><div class="alert alert-warning" role="alert">Desculpe. Não temos jogos para esta jogos.</div></div></div>';
 
             }else{
 
                 html_content += '<div class="row">';
 
-                for(let j = 0; j<data_json[i].brinquedos.length; j++){                        
+                for(let j = 0; j<data_json[i].jogos.length; j++){                        
 
-                    html_content += card_brinquedo(data_json[i].brinquedos[j].nome,data_json[i].brinquedos[j].imagem,data_json[i].brinquedos[j].valor,data_json[i].brinquedos[j].whatsapp);
+                    html_content += card_brinquedo(data_json[i].jogos[j].nome,data_json[i].jogos[j].imagem,data_json[i].jogos[j].valor,data_json[i].jogos[j].whatsapp);
     
                 }
 
@@ -123,6 +125,9 @@ var card_brinquedo = function(nome, imagem, valor, whatsapp)
                 '</div>'+
             '</div>';
 
+
+
+            
 }
 
     </script>
